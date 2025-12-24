@@ -6,12 +6,14 @@ import { generateSchedule } from './utils/scheduler';
 import { Student, Holiday, ScheduleItem } from './types';
 import { Settings, RefreshCw, GraduationCap } from 'lucide-react';
 
+// Safe ID generator for broader browser compatibility
+const generateId = () => Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
+
 // Helper function to generate the default 2025-2026 holidays
-// Defined outside component to keep it clean or used in lazy initializer
 const getDefaultHolidays = (): Holiday[] => {
   const initialHolidays: Holiday[] = [];
   const addHoliday = (date: string, description: string) => {
-    initialHolidays.push({ id: crypto.randomUUID(), date, description });
+    initialHolidays.push({ id: generateId(), date, description });
   };
   
   const addRange = (startStr: string, endStr: string, description: string) => {

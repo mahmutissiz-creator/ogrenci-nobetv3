@@ -13,10 +13,12 @@ export const StudentList: React.FC<StudentListProps> = ({ students, setStudents 
   const [bulkText, setBulkText] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const generateId = () => Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
+
   const addStudent = () => {
     if (!newName.trim()) return;
     const newStudent: Student = {
-      id: crypto.randomUUID(),
+      id: generateId(),
       name: newName.trim()
     };
     setStudents([...students, newStudent]);
@@ -42,7 +44,7 @@ export const StudentList: React.FC<StudentListProps> = ({ students, setStudents 
     if (names.length === 0) return;
 
     const newStudents = names.map(name => ({
-      id: crypto.randomUUID(),
+      id: generateId(),
       name
     }));
 

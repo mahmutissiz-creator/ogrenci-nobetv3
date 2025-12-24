@@ -11,6 +11,8 @@ export const HolidayPicker: React.FC<HolidayPickerProps> = ({ holidays, setHolid
   const [date, setDate] = useState('');
   const [desc, setDesc] = useState('');
 
+  const generateId = () => Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
+
   const addHoliday = () => {
     if (!date) return;
     
@@ -21,7 +23,7 @@ export const HolidayPicker: React.FC<HolidayPickerProps> = ({ holidays, setHolid
     }
 
     const newHoliday: Holiday = {
-      id: crypto.randomUUID(),
+      id: generateId(),
       date,
       description: desc || 'Resmi Tatil'
     };

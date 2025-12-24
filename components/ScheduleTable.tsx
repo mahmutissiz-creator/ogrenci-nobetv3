@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScheduleItem } from '../types';
-import { Download, Calendar, User } from 'lucide-react';
+import { Download, Calendar } from 'lucide-react';
 import { exportToCSV } from '../utils/exporter';
 
 interface ScheduleTableProps {
