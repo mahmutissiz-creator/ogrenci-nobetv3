@@ -1,0 +1,9 @@
+/* 
+  Tailwind CDN kullanıldığı için burası boş bırakılabilir 
+  veya özel stiller eklenebilir.
+*/
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

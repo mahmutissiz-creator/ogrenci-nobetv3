@@ -1,0 +1,5 @@
+{
+  "name": "Nöbet Listesi Oluşturucu",
+  "description": "Öğretmenler için sınıf nöbet listesi hazırlama uygulaması. Hafta sonlarını ve tatilleri atlayarak otomatik liste oluşturur ve Excel çıktısı verir.",
+  "requestFramePermissions": []
+}
