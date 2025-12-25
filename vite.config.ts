@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+
 // https://vitejs.dev/config/
+
+
 export default defineConfig({
   plugins: [react()],
-  base: './', // GitHub Pages için göreceli yol kullanımı önemlidir
+  base: '/ogrenci-nobetv3/', // GitHub'daki repository adını tam olarak buraya yaz (Örn: /benim-uygulamam/)
 })

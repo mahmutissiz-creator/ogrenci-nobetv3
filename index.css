@@ -1,9 +1,15 @@
-/* 
-  Tailwind CDN kullanıldığı için burası boş bırakılabilir 
-  veya özel stiller eklenebilir.
-*/
+@import "tailwindcss";
+/* v4 otomatik tarar ama istersen kaynak belirtebilirsin: */
+@source "../index.html";
+@source "./**/*.{js,ts,jsx,tsx}";
 body {
+  margin: 0;
+}
+body {
+
+
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
